@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>FoodGasm</title>
+		<link rel = "stylesheet" href = "MainPage.css">
+	</head>
+	<style>
+		body{
+	background-color: rgb(255,230,230);
+}
+
+.main img{
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.main p{
+	position: relative;
+	top: 60px;
+	font-family:cursive;
+	font-style: bold;
+	text-align: center;
+}
+
+#heading{
+	font-family: Monaco;
+	font-size: 60px;
+}
+
+.random{
+	height: 50%;
+	width: 95%;
+	margin: 2%;
+	background-image: url("images/cuisine.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+}
+
+#select{
+	text-align: center;
+	font-size: 50px;
+}
+
+#options{
+	width: 80%;
+	padding: 5%;
+	margin: 5%;
+}
+
+button{
+	padding: 50px 50px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+	margin: 2%;
+	font-size: 180%;
+	width: 28%;
+}
+
+
+	</style>
+	<body>
+		<section>
+		<div class = "main" style="margin-bottom: 15%;">
+			<img src="test/images/logo5.png" alt="Logo" style="max-height: 20%; max-width: 15%;">
+			<p id = "heading" >FoodGasm - Food For Every Mood!!</p>	</div></section>
+	<section>
+		<div class="random">
+		</div>
+	</section>
+		<p id = "select">Select your current mood</p>
+		<div id = "options">
+			<button type = "button" onclick = "find('happy')">&#128513 <br>Happy!!</button>
+			<button type = "button" onclick = "find('sad')">&#128531 <br>Sad!!</button>
+			<button type = "button" onclick = "find('laziness')">&#128564 <br>Lazyy!!</button>
+			<button type = "button" onclick = "find('depression')">&#128579 <br>Depressed!!</button>
+			<button type = "button" onclick = "find('hungry')">&#129316 <br>Hungry!!</button>
+			<button type = "button" onclick = "find('boredom')">&#129320 <br>Bored!!</button>
+			<button type = "button" onclick = "find('stress')">&#129327 <br>Stressed!!</button>
+			<button type = "button" onclick = "find('cold')">&#127783 <br>Cool weather!!</button>
+			<button type = "button" onclick = "find('tv')">&#129317 <br>Routine life!!</button>
+		</div>
+	</body>
+	<script>
+        function find(val) {
+          window.location.href="/find?mood="+val;
+        }
+      </script>
+</html>
